@@ -34,12 +34,18 @@ for(i=0; i<5; i++){
   }
 }
 console.log(numbersUser);
-//function getNumbersUser(array){
-//for(i=0; i<5; i++){
-//  var numberMem = parseInt(prompt('inserisci 5 numeri che ricordi'));
-//  numbersUser.push(numberMem);
-//}
-//  console.log(numbersUser);
-
 //bisogna confrontare i numeri inseriti dall'utente con quelli generati dal pc
 //funzione in cui si verifica se il numero da cercare è presente nell'array
+//se i numeri utente sono uguali a quelli del pc allora stampiamo i numeri uguali
+//verificare presenza nome dell'utente nella lista
+var userNumber = false
+var equalNumbers = [];
+for (var i=0; i<randomNumbers.length; i++){
+  //var numberCeck = randomNumbers[i];
+  if(getNumbersUser(randomNumbers, numberMem) == true){
+    equalNumbers.push(userNumber);
+    userNumber = true;
+    alert('hai totalizzato');
+  }
+}
+console.log(presente);
