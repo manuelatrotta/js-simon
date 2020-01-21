@@ -33,6 +33,11 @@ var countDown = setInterval(countDownScore);
       time --;
     }
   }
+//inserimento 5 numeri utente
+var numbersUser = [];
 
-  var numersUser = [2];
-  alert(numersUser);
+for(i=0; i<5; i++){
+  var numberMem = parseInt(prompt('inserisci 5 numeri che ricordi'));
+  numbersUser.push(numberMem);
+}
+  console.log(numbersUser);
