@@ -9,7 +9,8 @@ while (randomNumbers.length <5) {
     randomNumbers.push(cpuRandomNumber);
   }
 }
-console.log(randomNumbers.sort());
+console.log(randomNumbers);
+//alert all'utente con i 5 numeri casuali
 alert('memorizza questa serie di 5 numeri' +' '+ randomNumbers);
 
 //funzione per numero random
@@ -19,3 +20,19 @@ function getRandom (min, max) {
   var random = Math.floor(Math.random() * (max - min + min) + 1);
   return random;
 }
+//deve partire un timer di 30 secondi e dopo l'utente deve inserire i numeri che ricorda.
+//variabili per la funzione countDownScore
+var time = 30;
+var countDown = setInterval(countDownScore);
+
+  function countDownScore(){
+    console.log(time);
+    if(time == 0){
+      clearInterval(countDown);
+    }else{
+      time --;
+    }
+  }
+
+  var numersUser = [2];
+  alert(numersUser);
