@@ -31,9 +31,9 @@ function getNumbersUser(array){
 for(i=0; i<5; i++){
   var numberMem = parseInt(prompt('inserisci 5 numeri che ricordi'));
   numbersUser.push(numberMem);
-  console.log(numbersUser);
   }
 }
+console.log(numbersUser);
 //function getNumbersUser(array){
 //for(i=0; i<5; i++){
 //  var numberMem = parseInt(prompt('inserisci 5 numeri che ricordi'));
