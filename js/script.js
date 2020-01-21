@@ -22,22 +22,24 @@ function getRandom (min, max) {
 }
 //deve partire un timer di 30 secondi e dopo l'utente deve inserire i numeri che ricorda.
 //variabili per la funzione countDownScore
-var time = 30;
-var countDown = setInterval(countDownScore);
-
-  function countDownScore(){
-    console.log(time);
-    if(time == 0){
-      clearInterval(countDown);
-    }else{
-      time --;
-    }
-  }
+  setTimeout(getNumbersUser,8000);
+  //console.log(numbersUser);
 //inserimento 5 numeri utente
+//var numbersUser = [];
 var numbersUser = [];
-
+function getNumbersUser(array){
 for(i=0; i<5; i++){
   var numberMem = parseInt(prompt('inserisci 5 numeri che ricordi'));
   numbersUser.push(numberMem);
-}
   console.log(numbersUser);
+  }
+}
+//function getNumbersUser(array){
+//for(i=0; i<5; i++){
+//  var numberMem = parseInt(prompt('inserisci 5 numeri che ricordi'));
+//  numbersUser.push(numberMem);
+//}
+//  console.log(numbersUser);
+
+//bisogna confrontare i numeri inseriti dall'utente con quelli generati dal pc
+//funzione in cui si verifica se il numero da cercare è presente nell'array
