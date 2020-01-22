@@ -20,32 +20,19 @@ function getRandom (min, max) {
   var random = Math.floor(Math.random() * (max - min + min) + 1);
   return random;
 }
-//deve partire un timer di 30 secondi e dopo l'utente deve inserire i numeri che ricorda.
-//variabili per la funzione countDownScore
-  setTimeout(getNumbersUser,8000);
-  //console.log(numbersUser);
-//inserimento 5 numeri utente
-//var numbersUser = [];
-var numbersUser = [];
-function getNumbersUser(array){
-for(i=0; i<5; i++){
-  var numberMem = parseInt(prompt('inserisci 5 numeri che ricordi'));
-  numbersUser.push(numberMem);
+//deve partire un timer di 30 secondi e dopo l'utente deve inserire i numeri che ricorda (for con i<5)
+//variabile in cui verranno inseriti i numeri uguali a quelli generati random dal pc
+var numbersFind = [];
+setTimeout (function() {
+  var numbersOk =[];
+  for(var i = 0; i < 5; i++) {
+    var numberUser = parseInt(prompt('inserisci il numero che ricordi ' + (i + 1)));
+    // devo controllare che il numero inseito dal''utente  deve essere in numberRandom e se sono presenti push in numbersFind
+    if(randomNumbers.includes(numberUser)) {
+      numbersFind.push(numberUser)
+    }
   }
-}
-console.log(numbersUser);
-//bisogna confrontare i numeri inseriti dall'utente con quelli generati dal pc
-//funzione in cui si verifica se il numero da cercare è presente nell'array
-//se i numeri utente sono uguali a quelli del pc allora stampiamo i numeri uguali
-//verificare presenza nome dell'utente nella lista
-var userNumber = false
-var equalNumbers = [];
-for (var i=0; i<randomNumbers.length; i++){
-  //var numberCeck = randomNumbers[i];
-  if(getNumbersUser(randomNumbers, numberMem) == true){
-    equalNumbers.push(userNumber);
-    userNumber = true;
-    alert('hai totalizzato');
-  }
-}
-console.log(presente);
+  console.log(numbersFind);
+  //alert con numeri trovati uguali e punteggio con .length
+  alert(numbersFind + ' '+ 'hai indovinato' + ' '+ numbersFind.length + ' '+ 'numeri');
+}, 30000)
